@@ -4,7 +4,7 @@ Deface::Override.new(:virtual_path => "spree/admin/shared/_configuration_menu",
                      :name => "configurations_menu_self_delivery_points")
 
 Deface::Override.new(:virtual_path => "spree/checkout/_address",
-                     :replace => "code[erb-loud]:contains('order[use_billing]')",
+                     :replace => "erb loud:contains('order[use_billing]')",
                      :text => "<%= check_box_tag 'order[use_billing]', '1', (!(@order.bill_address.empty? && @order.ship_address.empty?) && @order.bill_address.same_as?(@order.ship_address))",
                      :name => "replace_checkout_use_billing_checkbox")
 
